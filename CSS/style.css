@@ -79,6 +79,10 @@ li {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.section-why--choose .grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* module resuable */
 
 .btn {
@@ -316,6 +320,46 @@ main {
 
 
 /* <----------------------- END COURSES SECTION ------------------------> */
+
+/* <----------------------- START WHY-CHOOSE SECTION ------------------------> */
+
+.grid-three--cols {
+    gap: 4.4rem;
+
+}
+
+.text-align--right .why-choose--div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    text-align: right;
+}
+
+.comman-text--highlight {
+    width: 4.4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--supporting-color);
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.why-choose--div img {
+    width: 90%;
+    height: auto;
+}
+
+
+
+
+
+
+/* <----------------------- END WHY-CHOOSE SECTION ------------------------> */
 
  
 
