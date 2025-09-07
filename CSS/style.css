@@ -22,7 +22,7 @@ h6 {
     font-family: "Poppins", sans-serif;
 }
 
-p, li, a {
+p, li, a, label {
     font-family: "Urbanist", sans-serif;
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
@@ -67,13 +67,25 @@ li {
     padding-bottom: 2.4rem;
 } */
 
-.section-about .container:first-child,
+/* .section-about .container:first-child,
 .section-blog .container:first-child,
 .section-courses .container:first-child,
 .section-contact--homepage .container:first-child,
 .section-why--choose .container:first-child,
 .section-contact .container:first-child {
   padding-bottom: 2.4rem;
+} */
+
+:is(
+    .section-about,
+    .section-blog, 
+    .section-courses, 
+    .section-contact--homepage, 
+    .section-why--choose, 
+    .section-contact
+    )
+    .container:first-child {
+    padding-bottom: 2.4rem;
 }
 
 
@@ -424,6 +436,101 @@ main {
 
 /* <----------------------- END WHY-CHOOSE SECTION ------------------------> */
 
+
+/* <----------------------- START BLOG SECTION ------------------------> */
+
+.section-blog {
+
+    background-color: var(--bg-color);
+
+    & .grid {
+        gap: 6.4rem;
+    }
+
+    & .blog {
+        box-shadow: var(--btn-box-shadow);
+        transition: scale 0.2s linear;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        & .blog-content {
+            padding: 1.4rem 2.4rem 2.4rem;
+        }
+    }
+
+    & img {
+    width: 100%;
+    height: auto;
+    }
+
+    & .blog-date {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+
+        & .fa-solid {
+            background-color: transparent;
+            padding: 0;
+        }
+    }
+
+    & .section-comman--title {
+        margin-top: 0.8rem;
+    }
+}
+
+/* <----------------------- END BLOG SECTION ------------------------> */
+
+
+/* <----------------------- START CONTACT SECTION ------------------------> */
+
+
+.grid {
+    gap: 6.2rem;
+}
+
+.subject {
+    margin-bottom: 3.2rem;
+}
+
+.contact-content .grid {
+    gap: 6.4rem;
+}
+
+label {
+    display: block;
+    text-transform: capitalize;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.4rem 2.4rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+}
+
+::placeholder {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+}
+
+.btn {
+    font-size: 1.8rem;
+    border: none;
+    text-transform: capitalize;
+}
+
+.contact-map {
+    margin-top: 3rem;
+}
+
+
+/* <----------------------- END CONTACT SECTION ------------------------> */
+
+
 /* <----------------------- START CONTACT HOME SECTION ------------------------> */
 
 .section-contact--homepage {
@@ -438,7 +545,7 @@ main {
     position: relative;
     bottom: -15rem;
     z-index: 1;
-    margin-bottom: -15px;
+    margin-bottom: 5rem;
     background-color: var(--white-color);
 
     & .grid {
@@ -480,7 +587,7 @@ main {
 
 footer {
     background-color: var(--footer-bg-color);
-    padding-top: 10rem;
+    padding-top: 0rem;
 }
 
 footer * {
@@ -531,6 +638,10 @@ footer .grid{
 #foot {
     padding: 15rem 4rem 4rem 4rem;
 }
+
+/* footer {
+    padding-top: 0;
+} */
 /* <----------------------- END FOOTER SECTION ------------------------> */
  
 
