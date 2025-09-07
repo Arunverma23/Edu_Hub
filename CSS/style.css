@@ -787,7 +787,7 @@ footer .grid{
       font-weight: 1000;
     }
 
-    & .navbar-brand {
+    & .navbar-logo {
       text-align: center;
       margin-bottom: 2.4rem;
     }
@@ -824,6 +824,46 @@ footer .grid{
   :is(.section-contact--homepage) .container:first-child {
     padding: 6.4rem 0rem 2.4rem 0rem;
   }
+}
+
+@media (width <= 400px) {
+
+    .section-navbar .container {
+    display: flex;
+    flex-direction: column;
+
+    & .navbar ul {
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: -1rem;
+      font-weight: 1000;
+
+      & li a{
+        font-size: xx-small;
+      }
+    }
+
+    & .navbar-logo {
+      text-align: center;
+      margin-bottom: 1rem;
+      width: 2px;
+      height: 2px;
+      margin-right: 1rem ;
+
+      & a img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+   
+
+
+footer .grid-four--cols {
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    text-align: left;
+    gap: 1rem;
+}
 }
 
 /* <------------------------END MEDIA QUERIES SECTION-------------------------> */
