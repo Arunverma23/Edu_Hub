@@ -11,6 +11,9 @@
 
 html {
     font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+    /* scroll-snap-type: Y mandatory; */
+
 }
 
 h1,
@@ -56,6 +59,10 @@ li {
 }
 
 /* Layout */
+
+section {
+    /* scroll-snap-align: center; */
+}
 
 .container {
   max-width: 142rem;
